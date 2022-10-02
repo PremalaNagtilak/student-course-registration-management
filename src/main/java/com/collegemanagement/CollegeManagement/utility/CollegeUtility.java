@@ -10,11 +10,10 @@ public class CollegeUtility {
 
 	public static Properties loadProperties(Properties properties) throws IOException {
 		try {
-			
+			properties.load(new FileReader("src//main//resources//application.properties"));
 		} catch (Exception e) {
 			System.out.println("Error while reading preoperty file... ==> "+e.getMessage());
 		}
-		properties.load(new FileReader("src//main//resources//application.properties"));
 		return properties;
 	}
 	
